@@ -1,0 +1,23 @@
+<ion-header>
+  <app-header title="Gallery"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <div class="ion-text-center ion-padding">
+      <div class="font-size-12 color-grey mar-b-10">GALLERY</div>
+
+      <div class="font-size-30">Check <span class="color-red">Our Gallery</span></div>
+    </div>
+
+    <div>
+      <app-swiper class="p-b-10">
+        <ion-slide *ngFor="let g of gallery">
+          <img [src]="g.icon" class="brd-rad-5" width="100%" alt="">
+        </ion-slide>
+      </app-swiper>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

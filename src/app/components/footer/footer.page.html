@@ -1,0 +1,32 @@
+<ion-toolbar color="dark">
+  <ion-grid class="ion-no-padding">
+    <ion-row *ngFor="let f of footer" class="ion-padding ion-justify-content-center">
+      <ion-col size="2">
+        <ion-icon class="font-size-30" [name]="f.icon"></ion-icon>
+      </ion-col>
+
+      <ion-col size="10">
+        <div class="title"> {{f.title}} </div>
+
+        <div>{{f.des1}} {{f.des1txt}}</div>
+        <div>{{f.des2}} {{f.des2txt}}</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding ion-justify-content-center">
+      <ion-col size="12">
+        <div class="title"> Follow Us </div>
+
+        <ion-grid class="ion-no-padding">
+          <ion-row>
+            <ion-col size="auto" class="ion-align-self-center" *ngFor="let l of logo">
+              <div class="brd-w brd-rad pad-10 mar-10 social">
+                <ion-icon class="font-size-18" [name]="l"></ion-icon>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>

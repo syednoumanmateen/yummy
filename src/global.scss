@@ -11,6 +11,7 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
+@import "src/theme/variables.scss";
 
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
@@ -24,3 +25,332 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+body {
+  color: var(--color-default);
+  background-color: var(--ion-color-dark)
+}
+
+.color-light {
+  color: var(--ion-color-light);
+}
+
+.color-dark {
+  color: var(--ion-color-dark);
+}
+
+.color-red {
+  color: var(--ion-color-danger);
+}
+
+.color-grey {
+  color: var(--ion-color-medium);
+}
+
+.color-yellow {
+  color: var(--ion-color-warning)
+}
+
+.bg-app {
+  background: var(--ion-color-light-shade);
+}
+
+.bg-dark {
+  background: var(--ion-color-dark);
+}
+
+.bg-primary {
+  background: var(--ion-color-primary);
+}
+
+.bg-grey {
+  background: var(--ion-color-medium);
+}
+
+.bg-red {
+  background: var(--ion-color-danger);
+}
+
+.bg-light {
+  background: white;
+}
+
+.font-size-30 {
+  font-size: 30px;
+}
+
+.font-size-28 {
+  font-size: 28px;
+}
+
+.font-size-26 {
+  font-size: 26px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-10 {
+  font-size: 10px;
+}
+
+.brd-w {
+  border: 1px solid var(--ion-color-light)
+}
+
+.brd {
+  border: 1px solid var(--ion-color-medium)
+}
+
+.brd-rad-5 {
+  border-radius: 5px;
+}
+
+.brd-rad {
+  border-radius: 50%;
+}
+
+.brd-tlr {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.brd-blr {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+.mar-5 {
+  margin: 5px;
+}
+
+.mar-10 {
+  margin: 10px;
+}
+
+.mar-15 {
+  margin: 15px;
+}
+
+.mar-20 {
+  margin: 20px;
+}
+
+.mar-b-5 {
+  margin-bottom: 5px;
+}
+
+.mar-b-10 {
+  margin-bottom: 10px;
+}
+
+.pad-5 {
+  padding: 5px;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.pad-15 {
+  padding: 15px;
+}
+
+.pad-20 {
+  padding: 20px;
+}
+
+.p-l-5 {
+  padding-left: 5px;
+}
+
+.p-r-5 {
+  padding-right: 5px;
+}
+
+.p-t-5 {
+  padding-top: 5px;
+}
+
+.p-b-5 {
+  padding-bottom: 5px;
+}
+
+.p-l-10 {
+  padding-left: 10px;
+}
+
+.p-r-10 {
+  padding-right: 10px;
+}
+
+.p-t-10 {
+  padding-top: 10px;
+}
+
+.p-b-10 {
+  padding-bottom: 10px;
+}
+
+#preloader {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}
+
+#preloader:before,
+#preloader:after {
+  background-color: var(--color-secondary);
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .line {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 1px;
+  height: 280px;
+  transition: all 0.8s ease 0s;
+}
+
+#preloader .line:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0%;
+  transform: translateY(-50%);
+  -webkit-animation: lineincrease 1000ms ease-in-out 0s forwards;
+  animation: lineincrease 1000ms ease-in-out 0s forwards;
+}
+
+#preloader .line:after {
+  content: "";
+  position: absolute;
+  background-color: #999;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(-100%);
+  -webkit-animation: linemove 1200ms linear 0s infinite;
+  animation: linemove 1200ms linear 0s infinite;
+  -webkit-animation-delay: 2000ms;
+  animation-delay: 2000ms;
+}
+
+#preloader.loaded .line {
+  opacity: 0;
+  height: 100% !important;
+}
+
+#preloader.loaded .line:after {
+  opacity: 0;
+}
+
+#preloader.loaded:before,
+#preloader.loaded:after {
+  -webkit-animation: preloaderfinish 300ms ease-in-out 500ms forwards;
+  animation: preloaderfinish 300ms ease-in-out 500ms forwards;
+}
+
+@-webkit-keyframes lineincrease {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes lineincrease {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes linemove {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes linemove {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes preloaderfinish {
+  0% {
+    width: 5 0%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes preloaderfinish {
+  0% {
+    width: 5 0%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}

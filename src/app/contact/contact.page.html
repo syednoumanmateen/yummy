@@ -1,0 +1,76 @@
+<ion-header>
+  <app-header title="Contact"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="bg-app">
+    <div class="ion-text-center ion-padding">
+      <div class="font-size-12 color-grey mar-b-10">CONTACT</div>
+
+      <div class="font-size-30">Need Help? <span class="color-red">Contact Us</span></div>
+    </div>
+
+    <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d614528.8908079652!2d77.43576269999998!3d12.880476500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1663578913711!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <ion-grid class="ion-no-padding p-b-10 color-light">
+      <ion-row class="pad-10 ion-margin bg-grey brd-rad-5 ion-align-items-center ion-justify-content-center"
+        *ngFor="let c of contact">
+        <ion-col size="2">
+          <div class="pad-10 mar-10 bg-red brd-rad">
+            <ion-icon class="font-size-22" [name]="c.icon"></ion-icon>
+          </div>
+        </ion-col>
+
+        <ion-col size="10">
+          <div class="title">
+            {{c.title}}
+          </div>
+
+          <div>
+            <div>
+              <span> {{c.desh}}</span> {{c.des}}
+            </div>
+            <div>
+              <span> {{c.des2h}}</span> {{c.des2}}
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="ion-padding p-b-10">
+      <ion-list class="ion-no-padding pad-15 brd-rad-5 mb-50" lines="none">
+        <ion-item class="ion-no-padding brd brd-rad-5 pad-5 mar-b-10">
+          <ion-label position="floating">Your Name</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-no-padding brd brd-rad-5 pad-5 mar-b-10">
+          <ion-label position="floating">Your Email</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-no-padding brd brd-rad-5 pad-5 mar-b-10">
+          <ion-label position="floating">Subject</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-no-padding brd brd-rad-5 pad-5 mar-b-10">
+          <ion-label position="floating">Message</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-item>
+
+        <div class="ion-text-center">
+          <ion-button size="medium" color="danger" shape="round">Send Message</ion-button>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

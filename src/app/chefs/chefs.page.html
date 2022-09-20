@@ -1,0 +1,29 @@
+<ion-header>
+  <app-header title="Chefs"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="bg-app p-b-10">
+    <div class="ion-padding">
+      <div class="ion-text-center ion-padding">
+        <div class="font-size-12 color-grey mar-b-10">Chefs</div>
+
+        <div class="font-size-30">Our <span class="color-red">Proffesional</span> Chefs</div>
+      </div>
+    </div>
+
+    <div class="brd-rad-5  bg-light mar-15" *ngFor="let c of chefs">
+      <img [src]="c.icon" class="brd-tlr" alt="">
+
+      <div class="pad-20 brd-blr ion-text-center">
+        <div class="title">{{c.name}}</div>
+
+        <div class="color-grey font-size-12 mar-b-10">{{c.occp}}</div>
+
+        <div class="font-size-16">{{c.des}}</div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

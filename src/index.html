@@ -8,7 +8,8 @@
   <base href="/" />
 
   <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
 
@@ -20,6 +21,29 @@
 </head>
 
 <body>
+  <div id="preloader" class="bg-dark">
+    <div class="line"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      "use strict";
+
+      const preloader = document.querySelector('#preloader');
+      if (preloader) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            preloader.classList.add('loaded');
+          }, 1000);
+          setTimeout(() => {
+            preloader.remove();
+          }, 2000);
+        });
+      }
+
+    });
+  </script>
+
   <app-root></app-root>
 </body>
 

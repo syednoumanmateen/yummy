@@ -1,0 +1,41 @@
+<ion-header>
+  <app-header title="Menu"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <div class="ion-text-center ion-padding">
+      <div class="font-size-12 color-grey mar-b-10">OUR MENU</div>
+
+      <div class="font-size-30">Check Our <span class="color-red">Yummy Menu</span></div>
+    </div>
+  </div>
+
+  <div>
+    <ion-grid class="ion-no-padding">
+      <ion-row class="pad-10 ion-text-center">
+        <ion-col size="3" *ngFor="let mc of menuCategory" (click)="onclick(mc.key)">
+          <div class="brd-b pad-10 mar-5" [ngClass]="{'brd-br': active == mc.key}">{{mc.title}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="active=='starters'">
+    <app-menu-list title="Starters"></app-menu-list>
+  </div>
+
+  <div *ngIf="active=='breakfast'">
+    <app-menu-list title="BreakFast"></app-menu-list>
+  </div>
+
+  <div *ngIf="active=='lunch'">
+    <app-menu-list title="Lunch"></app-menu-list>
+  </div>
+
+  <div *ngIf="active=='dinner'">
+    <app-menu-list title="Dinner"></app-menu-list>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

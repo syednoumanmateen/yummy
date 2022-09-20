@@ -1,0 +1,94 @@
+<ion-header>
+  <app-header title="About"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <div class="ion-text-center ion-padding">
+      <div class="font-size-12 color-grey mar-b-10">ABOUT US</div>
+
+      <div class="font-size-30">Learn More <span class="color-red">About Us</span></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="about-bg">
+      <div class="ion-text-center bg-light pad-10 brd-rad-5">
+        <div class="title">
+          Book a Table
+        </div>
+
+        <div class="title color-red">
+          +1 5589 55488 55
+        </div>
+      </div>
+    </div>
+
+    <div class="pad-10 marb">
+      <div class="mar-b-10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </div>
+
+      <ion-list class="ion-no-padding mar-b-10" lines="none">
+        <ion-item>
+          <ion-grid class="ion-no-padding">
+            <ion-row class="mar-b-5" *ngFor="let al of aboutList">
+              <ion-col size="1">
+                <ion-icon class="color-red" name="checkmark-done"></ion-icon>
+              </ion-col>
+
+              <ion-col>
+                {{al}}
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+
+      <div class="mar-b-10">
+        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+      </div>
+
+      <div class="mar-5">
+        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
+          <div class="about2-bg brd-rad-5">
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-app pad-20">
+      <div class="pad-20 bg-red brd-rad-5 color-light">
+        <div class="title">
+          Why Choose Yummy?
+        </div>
+
+        <div class="mar-b-10">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Duis aute irure dolor in reprehenderit Asperiores dolores sed et. Tenetur quia eos. Autem
+          tempore quibusdam vel necessitatibus optio ad corporis.
+        </div>
+
+        <div class="ion-text-center">
+          <ion-button size="medium" shape="round" color="medium">Learn More</ion-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-app pad-20">
+      <div class="pad-20 brd-rad-5 mar-b-10 ion-text-center" *ngFor="let af of aboutFeaturw">
+        <div class="marb">
+          <ion-icon class="color-red font-size-30 pad-15 bg-icon brd-rad" [name]="af.icon"></ion-icon>
+        </div>
+
+        <div class="title"> {{af.title}} </div>
+
+        <div class="color-grey"> {{af.des}} </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

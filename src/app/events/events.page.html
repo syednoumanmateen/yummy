@@ -1,0 +1,32 @@
+<ion-header>
+  <app-header title="Events"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <div class="ion-text-center ion-padding">
+      <div class="font-size-12 color-grey mar-b-10">Events</div>
+
+      <div class="font-size-30">Share <span class="color-red">Your Moments</span> In Our Restaurant</div>
+    </div>
+  </div>
+
+  <div>
+    <app-swiper class="p-b-10">
+      <ion-slide *ngFor="let e of events">
+        <div class="slide ion-text-left pt color-light"
+          style="background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('{{e.icon}}')">
+          <div class=" pad-10">
+            <div class="title font-size-20">{{e.title}}</div>
+
+            <div class="title brd-r font-size-28 p-b-5">{{e.price}}</div>
+
+            <div class="mar-b-10 p-b-10">{{e.des}}</div>
+          </div>
+        </div>
+      </ion-slide>
+    </app-swiper>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

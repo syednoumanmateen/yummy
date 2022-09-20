@@ -1,20 +1,70 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <app-header title="Home"></app-header>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="bg-app ion-text-center p-b-10">
+    <img src="./assets/hero_img.png" class="px" width="350px" alt="">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="font-size-20 mar-b-10 title">Enjoy Your Healthy Delicious Food</div>
+
+    <div class="mb">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque
+      eum quaerat.
+    </div>
+
+    <ion-grid class="ion-no-padding mb">
+      <ion-row class="ion-align-items-center">
+        <ion-col>
+          <ion-button shape="round" size="medium" color="danger" routerLink="/booking">Book a Table</ion-button>
+        </ion-col>
+        <ion-col class="font-size-20 v-middle">
+          <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
+            <ion-icon class="color-red font-size-26" name="play-circle-outline"></ion-icon>&nbsp; <span
+              class="watch">Watch Video</span>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="ion-padding">
+      <div class="ion-text-center ion-padding">
+        <div class="font-size-12 color-grey mar-b-10">TESTIMONIALS</div>
+
+        <div class="font-size-30">What Are They <span class="color-red">Saying About Us</span></div>
+      </div>
+    </div>
+
+    <div class="mar-10">
+      <app-swiper>
+        <ion-slide *ngFor="let t of testimonail">
+          <div class="slides ion-text-left">
+            <div class="brd-rr pad-10">
+              <div class="mar-b-10 font-size-16">
+                <span class="color-red font-size-30">"</span>{{t.des}}<span class="color-red font-size-30">"</span>
+              </div>
+
+              <div class="title">{{t.name}}</div>
+
+              <div class="font-size-14 color-grey mar-b-10">{{t.occp}}</div>
+
+              <div class="color-yellow">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+            </div>
+
+            <div class="ion-text-center">
+              <div class="brd-rad pd">
+                <img class="brd-rad brd-i" [src]="t.icon" alt="">
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+      </app-swiper>
+    </div>
   </div>
+
+  <app-footer></app-footer>
 </ion-content>

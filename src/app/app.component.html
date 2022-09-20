@@ -1,3 +1,74 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+	<ion-menu side="end" contentId="app-content">
+		<ion-content color="dark">
+			<ion-list class="bg-dark" lines="none">
+				<ion-menu-toggle auto-hide="false">
+					<ion-item class="ion-text-right" color="dark" detail="false" [routerDirection]="'root'" routerLink="/">
+						<ion-label>
+							<ion-text color="light">
+								<ion-icon name="close"></ion-icon>
+							</ion-text>
+						</ion-label>
+					</ion-item>
+
+					<ion-item detail="false" color="dark" routerLink="/home">
+						<ion-label>
+							<ion-text color="light">
+								Home
+							</ion-text>
+						</ion-label>
+					</ion-item>
+
+					<ion-item detail="false" color="dark" routerLink="/about">
+						<ion-label>
+							<ion-text color="light">
+								About
+							</ion-text>
+						</ion-label>
+					</ion-item>
+
+					<ion-item detail="false" color="dark" routerLink="/menu">
+						<ion-label>
+							<ion-text color="light">
+								Menu
+							</ion-text>
+						</ion-label>
+					</ion-item>
+
+					<ion-item detail="false" color="dark" routerLink="/events">
+						<ion-label>
+							<ion-text color="light">
+								Events
+							</ion-text>
+						</ion-label>
+					</ion-item>
+
+					<ion-item detail="false" color="dark" routerLink="/chefs">
+						<ion-label>
+							<ion-text color="light">
+								Chefs
+							</ion-text>
+						</ion-label>
+					</ion-item>
+
+					<ion-item detail="false" color="dark" routerLink="/gallery">
+						<ion-label>
+							<ion-text color="light">
+								Gallery
+							</ion-text>
+						</ion-label>
+					</ion-item>
+
+					<ion-item detail="false" color="dark" routerLink="/contact">
+						<ion-label>
+							<ion-text color="light">
+								Contact
+							</ion-text>
+						</ion-label>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+		</ion-content>
+	</ion-menu>
+	<ion-router-outlet id="app-content"></ion-router-outlet>
 </ion-app>

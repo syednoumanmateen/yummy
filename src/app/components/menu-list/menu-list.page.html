@@ -1,0 +1,17 @@
+<div class="ion-padding">
+  <div class="ion-text-center ion-padding mar-b-10">
+    <div class="font-size-12 color-grey mar-b-10">MENU</div>
+
+    <div class="font-size-30"><span class="color-red">{{title}}</span></div>
+  </div>
+
+  <div class="marb ion-text-center" *ngFor="let m of menu">
+    <img class="mar-b-10" width="200px" [src]="m.icon" alt="">
+
+    <div class="title"> {{m.title}} </div>
+
+    <div class="mar-b-10 font-size-14 color-grey"> {{m.des}} </div>
+
+    <div class="color-red title"> {{m.price}} </div>
+  </div>
+</div>
