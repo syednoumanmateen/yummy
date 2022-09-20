@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderPage implements OnInit {
 
-  @Input() title: any;
-  
   constructor() { }
 
   ngOnInit() {
