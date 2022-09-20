@@ -6,21 +6,24 @@
   <div class="bg-app p-b-10">
     <div class="ion-padding">
       <div class="ion-text-center ion-padding">
-        <div class="font-size-12 color-grey mar-b-10">Chefs</div>
+        <div class="font-size-12 color-grey mar-b-10 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.2s">
+          Chefs</div>
 
-        <div class="font-size-30">Our <span class="color-red">Proffesional</span> Chefs</div>
+        <div class="font-size-30 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.4s">Our <span
+            class="color-red">Proffesional</span> Chefs</div>
       </div>
     </div>
 
     <div class="brd-rad-5  bg-light mar-15" *ngFor="let c of chefs">
-      <img [src]="c.icon" class="brd-tlr" alt="">
+      <img [src]="c.icon" class="brd-tlr wow heartBeat" data-wow-duration="1.3s" data-wow-delay="0.2s" alt="">
 
       <div class="pad-20 brd-blr ion-text-center">
-        <div class="title">{{c.name}}</div>
+        <div class="title wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.2s">{{c.name}}</div>
 
-        <div class="color-grey font-size-12 mar-b-10">{{c.occp}}</div>
+        <div class="color-grey font-size-12 mar-b-10 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.4s">
+          {{c.occp}}</div>
 
-        <div class="font-size-16">{{c.des}}</div>
+        <div class="font-size-16 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.6s">{{c.des}}</div>
       </div>
     </div>
   </div>

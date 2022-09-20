@@ -5,15 +5,18 @@
 <ion-content>
   <div class="ion-padding">
     <div class="ion-text-center ion-padding">
-      <div class="font-size-12 color-grey mar-b-10">ABOUT US</div>
+      <div class="font-size-12 color-grey mar-b-10 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.2s">
+        ABOUT US</div>
 
-      <div class="font-size-30">Learn More <span class="color-red">About Us</span></div>
+      <div class="font-size-30 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.4s">Learn More <span
+          class="color-red">About Us</span></div>
     </div>
   </div>
 
   <div>
     <div class="about-bg">
-      <div class="ion-text-center bg-light pad-10 brd-rad-5">
+      <div class="ion-text-center bg-light pad-10 brd-rad-5 wow heartBeat" data-wow-duration="1.3s"
+        data-wow-delay="0.2s">
         <div class="title">
           Book a Table
         </div>
@@ -25,7 +28,7 @@
     </div>
 
     <div class="pad-10 marb">
-      <div class="mar-b-10">
+      <div class="mar-b-10 wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="0.2s">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </div>
@@ -33,7 +36,8 @@
       <ion-list class="ion-no-padding mar-b-10" lines="none">
         <ion-item>
           <ion-grid class="ion-no-padding">
-            <ion-row class="mar-b-5" *ngFor="let al of aboutList">
+            <ion-row class="mar-b-5 wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="0.2s"
+              *ngFor="let al of aboutList">
               <ion-col size="1">
                 <ion-icon class="color-red" name="checkmark-done"></ion-icon>
               </ion-col>
@@ -46,12 +50,12 @@
         </ion-item>
       </ion-list>
 
-      <div class="mar-b-10">
+      <div class="mar-b-10 wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="0.2s">
         Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
       </div>
 
-      <div class="mar-5">
+      <div class="mar-5 wow heartBeat" data-wow-duration="1.3s" data-wow-delay="0.2s">
         <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
           <div class="about2-bg brd-rad-5">
           </div>
@@ -60,7 +64,7 @@
     </div>
 
     <div class="bg-app pad-20">
-      <div class="pad-20 bg-red brd-rad-5 color-light">
+      <div class="pad-20 bg-red brd-rad-5 color-light wow heartBeat" data-wow-duration="1.3s" data-wow-delay="0.2s">
         <div class="title">
           Why Choose Yummy?
         </div>
@@ -78,9 +82,11 @@
     </div>
 
     <div class="bg-app pad-20">
-      <div class="pad-20 brd-rad-5 mar-b-10 ion-text-center" *ngFor="let af of aboutFeaturw">
+      <div class="pad-20 brd-rad-5 mar-b-10 ion-text-center wow heartBeat" data-wow-duration="1.3s"
+        data-wow-delay="0.2s" *ngFor="let af of aboutFeaturw">
         <div class="marb">
-          <ion-icon class="color-red font-size-30 pad-15 bg-icon brd-rad" [name]="af.icon"></ion-icon>
+          <ion-icon class="color-red font-size-30 pad-15 bg-icon brd-rad wow bounceInDown" data-wow-duration="1.3s"
+            data-wow-delay="0.3s" [name]="af.icon"></ion-icon>
         </div>
 
         <div class="title"> {{af.title}} </div>

@@ -5,15 +5,17 @@
 <ion-content>
   <div class="ion-padding">
     <div class="ion-text-center ion-padding">
-      <div class="font-size-12 color-grey mar-b-10">OUR MENU</div>
+      <div class="font-size-12 color-grey mar-b-10 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.2s">
+        OUR MENU</div>
 
-      <div class="font-size-30">Check Our <span class="color-red">Yummy Menu</span></div>
+      <div class="font-size-30 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.4s">Check Our <span
+          class="color-red">Yummy Menu</span></div>
     </div>
   </div>
 
   <div>
     <ion-grid class="ion-no-padding">
-      <ion-row class="pad-10 ion-text-center">
+      <ion-row class="pad-10 ion-text-center wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.2s">
         <ion-col size="3" *ngFor="let mc of menuCategory" (click)="onclick(mc.key)">
           <div class="brd-b pad-10 mar-5" [ngClass]="{'brd-br': active == mc.key}">{{mc.title}}</div>
         </ion-col>

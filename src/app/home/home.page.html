@@ -4,20 +4,24 @@
 
 <ion-content>
   <div class="bg-app ion-text-center p-b-10">
-    <img src="./assets/hero_img.png" class="px" width="350px" alt="">
+    <img src="./assets/hero_img.png" class="px wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.2s"
+      width="350px" alt="">
 
-    <div class="font-size-20 mar-b-10 title">Enjoy Your Healthy Delicious Food</div>
+    <div class="font-size-20 mar-b-10 title wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.4s">Enjoy Your
+      Healthy Delicious Food</div>
 
-    <div class="mb">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque
+    <div class="mb wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.6s">Sed autem laudantium dolores.
+      Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque
       eum quaerat.
     </div>
 
     <ion-grid class="ion-no-padding mb">
       <ion-row class="ion-align-items-center">
-        <ion-col>
+        <ion-col class="wow bounceInLeft" data-wow-duration="1.3s" data-wow-delay="0.2s">
           <ion-button shape="round" size="medium" color="danger" routerLink="/booking">Book a Table</ion-button>
         </ion-col>
-        <ion-col class="font-size-20 v-middle">
+
+        <ion-col class="font-size-20 v-middle wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="0.2s">
           <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
             <ion-icon class="color-red font-size-26" name="play-circle-outline"></ion-icon>&nbsp; <span
               class="watch">Watch Video</span>
@@ -28,9 +32,11 @@
 
     <div class="ion-padding">
       <div class="ion-text-center ion-padding">
-        <div class="font-size-12 color-grey mar-b-10">TESTIMONIALS</div>
+        <div class="font-size-12 color-grey mar-b-10 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.2s">
+          TESTIMONIALS</div>
 
-        <div class="font-size-30">What Are They <span class="color-red">Saying About Us</span></div>
+        <div class="font-size-30 wow bounceInDown" data-wow-duration="1.3s" data-wow-delay="0.4s">What Are They <span
+            class="color-red">Saying About Us</span></div>
       </div>
     </div>
 
@@ -39,15 +45,16 @@
         <ion-slide *ngFor="let t of testimonail">
           <div class="slides ion-text-left">
             <div class="brd-rr pad-10">
-              <div class="mar-b-10 font-size-16">
+              <div class="mar-b-10 font-size-16 wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="0.2s">
                 <span class="color-red font-size-30">"</span>{{t.des}}<span class="color-red font-size-30">"</span>
               </div>
 
-              <div class="title">{{t.name}}</div>
+              <div class="title wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="0.4s">{{t.name}}</div>
 
-              <div class="font-size-14 color-grey mar-b-10">{{t.occp}}</div>
+              <div class="font-size-14 color-grey mar-b-10  wow bounceInRight" data-wow-duration="1.3s"
+                data-wow-delay="0.6s">{{t.occp}}</div>
 
-              <div class="color-yellow">
+              <div class="color-yellow  wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="0.8s">
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -56,7 +63,7 @@
             </div>
 
             <div class="ion-text-center">
-              <div class="brd-rad pd">
+              <div class="brd-rad pd  wow heartBeat" data-wow-duration="1.3s" data-wow-delay="0.2s">
                 <img class="brd-rad brd-i" [src]="t.icon" alt="">
               </div>
             </div>
